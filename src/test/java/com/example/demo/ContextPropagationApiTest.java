@@ -85,7 +85,7 @@ class ContextPropagationApiTest {
         assertAllServiceLogsHaveTraceId(getTraceIdFromControllerLog());
     }
 
-    // context propagation fails without Hooks.enableAutomaticContextPropagation()
+    // context propagation fails even with Hooks.enableAutomaticContextPropagation()
     @Test
     void testSubscribe() throws InterruptedException {
         RestAssured.given()
