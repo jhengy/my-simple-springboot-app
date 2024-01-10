@@ -6,7 +6,7 @@
 
 # How to run
 
-- run `ContextPropagationApiTest`
+- run [`ContextPropagationApiTest`](./src/test/java/com/example/demo/ContextPropagationApiTest.java)
 - observe the application logs and the test outcomes
 
 # Observation
