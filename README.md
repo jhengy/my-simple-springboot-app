@@ -13,9 +13,10 @@
 
 - To preserve tracing information in Reactive chain, it requires calling `Hooks.enableAutomaticContextPropagation()`:
   see https://github.com/jhengy/my-simple-springboot-app/commit/92c2925957b7212b166f8f764b641f4df686121a
-- If reactive chain uses reactive web client and the chain is invoked using `.subscribe`, it requires adding `
+- If reactive chain uses reactive web client and the chain is invoked using `.subscribe()`, it requires adding `
   .contextCapture()` to the reactive
-  chain: https://github.com/jhengy/my-simple-springboot-app/commit/b6eae55ec8b310281a222228a175235f7d1dc8c7
+  chain: https://github.com/jhengy/my-simple-springboot-app/commit/b6eae55ec8b310281a222228a175235f7d1dc8c7. However the
+  same is not required if the reactive chain is called using `.block()`
 - `.contextCapture()` does not work for downstream logs:
   see https://github.com/jhengy/my-simple-springboot-app/commit/b6eae55ec8b310281a222228a175235f7d1dc8c7#diff-1c9e8faf8b007829d6c11cad02e87721b6ecbdeb417584e81000c2ae7fdc55a9R49
 
